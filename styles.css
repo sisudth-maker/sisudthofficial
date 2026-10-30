@@ -17,3 +17,6 @@
 .submit-btn:disabled { opacity:.65; cursor:wait; }
 .form-status.success { color:#a8e6bf; }
 .form-status.error { color:#ffd08a; }
+
+/* Selected work */
+.portfolio{background:#0b0d12}.portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.portfolio-card{padding:30px 26px;background:linear-gradient(150deg,#181a20,#101219);border:1px solid rgba(216,185,108,.23);border-radius:12px;display:flex;flex-direction:column;min-height:280px}.portfolio-type{color:var(--gold);font-size:10px;letter-spacing:1.5px;font-weight:700}.portfolio-card h3{font-size:22px;letter-spacing:-.6px;margin-bottom:12px}.portfolio-card>p:not(.portfolio-type){font-size:13px;color:var(--muted);line-height:1.8}.portfolio-card>a,.portfolio-unpublished{font-size:12px;color:var(--gold2);margin-top:auto}.portfolio-unpublished{color:#a6a9b2}@media(max-width:900px){.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:680px){.portfolio-grid{grid-template-columns:1fr}}
