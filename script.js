@@ -1,4 +1,16 @@
-const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('#nav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');toggle.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.querySelector('#year').textContent=new Date().getFullYear();document.querySelectorAll('[data-package]').forEach(a=>a.addEventListener('click',()=>{const service=document.querySelector('#service');const wanted=a.dataset.package;service.value=wanted==='Custom Digital Solution'?'Custom software': 'Website development';document.querySelector('#message').value=`I'm interested in the ${wanted} package. Please contact me to discuss the scope.`}));const projectForm=document.querySelector('#project-form');
+const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('#nav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');toggle.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.querySelector('#year').textContent=new Date().getFullYear();// Package selections now navigate from Pricing to the dedicated Contact page.
+document.querySelectorAll('[data-package]').forEach(link => {
+  const selected = link.dataset.package;
+  link.href = 'contact.html?package=' + encodeURIComponent(selected);
+});
+const selectedPackage = new URLSearchParams(window.location.search).get('package');
+if (selectedPackage && ['Starter Website', 'Business Website', 'Custom Digital Solution'].includes(selectedPackage)) {
+  const service = document.querySelector('#service');
+  const message = document.querySelector('#message');
+  if (service) service.value = selectedPackage === 'Custom Digital Solution' ? 'Custom software' : 'Website development';
+  if (message) message.value = `I'm interested in the ${selectedPackage} package. Please contact me to discuss the scope.`;
+}
+const projectForm=document.querySelector('#project-form');
 if(projectForm){
  const status=document.querySelector('#form-status');
  const button=projectForm.querySelector('button[type="submit"]');
