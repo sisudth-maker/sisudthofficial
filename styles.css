@@ -40,3 +40,6 @@
 
 /* Visible enquiry submission feedback directly below the submit button */
 .form-status[hidden]{display:none!important}.form-status{display:block;margin:15px 0 12px;padding:14px 16px;border-radius:8px;border:1px solid rgba(216,185,108,.65);background:#282419;color:#f8e6ae;font-size:14px;font-weight:600;line-height:1.5}.form-status.success{border-color:#4fc58c;background:#143125;color:#b7f8d5}.form-status.error{border-color:#f18181;background:#391d22;color:#ffd2d2}.submit-btn:disabled{opacity:.65;cursor:wait}
+
+/* Prominent, accessible enquiry form submission feedback */
+.contact-form .form-status{display:block!important;min-height:0;margin-top:16px;padding:15px 17px;border-radius:8px;border:1px solid transparent;font-size:14px;font-weight:600;line-height:1.6;overflow-wrap:anywhere}.contact-form .form-status:empty{display:none!important}.contact-form .form-status.pending{background:#24262b;border-color:#d8b96c;color:#f1dba0}.contact-form .form-status.success{background:#123226;border-color:#35b879;color:#b8f6d2}.contact-form .form-status.error{background:#3b1c21;border-color:#e66d77;color:#ffd0d3}.contact-form .submit-btn:disabled{opacity:.7;cursor:wait}
