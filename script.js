@@ -1,4 +1,14 @@
-const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('#nav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');toggle.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.querySelector('#year').textContent=new Date().getFullYear();document.querySelectorAll('[data-package]').forEach(a=>a.addEventListener('click',()=>{const service=document.querySelector('#service');const wanted=a.dataset.package;service.value=wanted==='Custom Digital Solution'?'Custom software': 'Website development';document.querySelector('#message').value=`I'm interested in the ${wanted} package. Please contact me to discuss the scope.`}));const projectForm=document.querySelector('#project-form');
+/**
+ * SISU DTH — SHARED INTERACTIONS
+ * Parent sections: navigation, footer, pricing cards, contact form.
+ * Child responsibilities: menu state, year, enquiry prefilling, AJAX feedback.
+ * Keep the submission endpoint, error handling and form fields unchanged.
+ */
+// NAVIGATION: toggle mobile menu and update accessibility attributes.
+const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('#nav');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');toggle.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));// FOOTER: display the current copyright year.
+document.querySelector('#year').textContent=new Date().getFullYear();// PRICING -> CONTACT: prefill enquiry details from a selected package.
+document.querySelectorAll('[data-package]').forEach(a=>a.addEventListener('click',()=>{const service=document.querySelector('#service');const wanted=a.dataset.package;service.value=wanted==='Custom Digital Solution'?'Custom software': 'Website development';document.querySelector('#message').value=`I'm interested in the ${wanted} package. Please contact me to discuss the scope.`}));// CONTACT FORM: validate input, submit securely and report provider response.
+const projectForm=document.querySelector('#project-form');
 if(projectForm){
  const status=document.querySelector('#form-status');
  const button=projectForm.querySelector('button[type="submit"]');
