@@ -43,3 +43,6 @@
 
 /* Prominent, accessible enquiry form submission feedback */
 .contact-form .form-status{display:block!important;min-height:0;margin-top:16px;padding:15px 17px;border-radius:8px;border:1px solid transparent;font-size:14px;font-weight:600;line-height:1.6;overflow-wrap:anywhere}.contact-form .form-status:empty{display:none!important}.contact-form .form-status.pending{background:#24262b;border-color:#d8b96c;color:#f1dba0}.contact-form .form-status.success{background:#123226;border-color:#35b879;color:#b8f6d2}.contact-form .form-status.error{background:#3b1c21;border-color:#e66d77;color:#ffd0d3}.contact-form .submit-btn:disabled{opacity:.7;cursor:wait}
+
+/* Actual SAT Thermostat project screenshots; retain illustration until assets are uploaded */
+.thermostat-screens{display:flex;gap:8px;justify-content:center;align-items:center;width:100%;height:100%;padding:9px;background:#111}.thermostat-screens img{height:100%;width:auto;max-width:49%;object-fit:contain;border-radius:4px;border:1px solid #333}.thermostat-visual:has(.thermostat-screens img) .thermostat-device{display:none}
