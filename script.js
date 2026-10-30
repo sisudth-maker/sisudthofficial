@@ -5,10 +5,11 @@ projectForm.addEventListener('submit',async e=>{
  const button=projectForm.querySelector('button[type=submit]');
  if(!projectForm.reportValidity()) return;
  button.disabled=true; button.querySelector('span').textContent='…';
- status.textContent='Sending your enquiry…'; status.classList.remove('error','success');
+ status.textContent='Sending your enquiry…'; status.scrollIntoView({block:'nearest',behavior:'smooth'}); status.classList.remove('error','success');
  try {
   const response=await fetch(projectForm.action,{method:'POST',body:new FormData(projectForm),headers:{'Accept':'application/json'}});
-  const result=await response.json();
+  const raw=await response.text();
+  let result; try {result=JSON.parse(raw)} catch {throw new Error('Unexpected response from the form provider.');}
   if(response.ok && (result.success===true || result.success==='true')) {
    status.textContent='Thanks — your enquiry has been sent. Sisu DTH will review your brief and get back to you.';
    status.classList.add('success'); projectForm.reset();
