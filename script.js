@@ -31,12 +31,14 @@ if(projectForm){
    let result={};
    try{result=JSON.parse(raw)}catch{}
    if(!response.ok || !(result.success===true || result.success==='true')){
-    throw new Error('Submission was not confirmed');
+    throw new Error('HTTP '+response.status+'; provider success: '+String(result.success ?? 'missing'));
    }
    showStatus('✓ Thank you! Your project enquiry was accepted by our form provider. We will review your details and contact you soon.','success');
    projectForm.reset();
   }catch(error){
-   showStatus('✕ We could not confirm your enquiry was sent. Please try again, use the Microsoft project form, or email sisudth@gmail.com. If this is your first submission, check your inbox for a FormSubmit activation email.','error');
+   console.error('SISU DTH enquiry form:',error);
+   const reason=error.name==='AbortError'?'The request timed out.':error instanceof TypeError?'A network or browser security error prevented confirmation.':'The form provider did not confirm acceptance.';
+   showStatus('✕ '+reason+' Please check your FormSubmit activation email, or use the Microsoft project form or sisudth@gmail.com.','error');
   }finally{
    clearTimeout(timeout);
    button.disabled=false;
