@@ -37,3 +37,6 @@
 
 /* Embedded live restaurant preview; host site may disallow framing */
 .live-site-preview{height:275px;background:#181818}.live-site-preview iframe{display:block;width:100%;height:205px;border:0;background:#fff}.live-site-preview .iframe-fallback{margin:0;padding:9px 12px;font-size:10px;line-height:1.4;color:#bbb;background:#181818}.live-site-preview .iframe-fallback a{color:var(--gold2);text-decoration:underline}
+
+/* Visible enquiry submission feedback directly below the submit button */
+.form-status[hidden]{display:none!important}.form-status{display:block;margin:15px 0 12px;padding:14px 16px;border-radius:8px;border:1px solid rgba(216,185,108,.65);background:#282419;color:#f8e6ae;font-size:14px;font-weight:600;line-height:1.5}.form-status.success{border-color:#4fc58c;background:#143125;color:#b7f8d5}.form-status.error{border-color:#f18181;background:#391d22;color:#ffd2d2}.submit-btn:disabled{opacity:.65;cursor:wait}
