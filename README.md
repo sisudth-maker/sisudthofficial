@@ -26,6 +26,6 @@ Until the recipient is activated with FormSubmit, delivery may fail. The form di
 Upload the complete `sisu-dth-website` folder to a static hosting provider (for example, Netlify, Cloudflare Pages or your web host). Keep the `assets` folder alongside `index.html`, `styles.css` and `script.js`.
 
 ## Phase 1 updates
-- Portfolio lists verified project descriptions; Virtual Boy is credited as independent work, and Market Monitor is identified as a prototype. Unreviewed projects are not represented as completed case studies.
+- Portfolio features D&B Poutine (live website), SISU DTH Market Monitor (Python prototype), and SAT Thermostat (Canva UI/UX concept). The portfolio previews must not be presented as real screenshots unless sourced from the projects.
 - Three project packages include 12 months of limited technical maintenance, with optional paid care after the included period and no automatic renewal. Confirm precise service levels in each written agreement.
 - Form uses the AJAX endpoint for sisudth@gmail.com. Verify FormSubmit activation and successful live submission before launch.
