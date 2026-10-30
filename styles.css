@@ -72,3 +72,7 @@
 .home-cta-inner .hero-actions{justify-content:center}
 @media(max-width:900px){.home-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-benefit-grid,.home-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.home-card-grid,.home-benefit-grid,.home-steps{grid-template-columns:1fr}.home-info-card{padding:22px}.home-steps{gap:10px}.home-cta-inner .hero-actions{align-items:center}}
+
+/* Four primary service categories: two columns on desktop, one on mobile. */
+.home-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:600px){.home-services-grid{grid-template-columns:1fr}}
