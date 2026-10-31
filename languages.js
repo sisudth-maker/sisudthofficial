@@ -1,7 +1,7 @@
 /* SISU DTH language selector. English is deliberately the default on every load. */
 (() => {
-  const buttons = [...document.querySelectorAll('.language-switcher [data-lang]')];
-  if (!buttons.length) return;
+  const selector = document.querySelector('#site-language');
+  if (!selector) return;
   const translations = {
     fr: {
       'Home':'Accueil','About':'À propos','Services':'Services','Price':'Tarifs','Discuss a project':'Parlons de votre projet','Privacy Policy':'Politique de confidentialité','Privacy notice':'Politique de confidentialité',
@@ -119,12 +119,8 @@
       if(orig.placeholder!==null) el.setAttribute('placeholder',translate(orig.placeholder,lang));
       if(orig.aria!==null) el.setAttribute('aria-label',translate(orig.aria,lang));
     });
-    buttons.forEach(button=>{
-      const selected=button.dataset.lang===lang;
-      button.setAttribute('aria-pressed',String(selected));
-      button.classList.toggle('active',selected);
-    });
+    selector.value = lang;
   }
-  buttons.forEach(button=>button.addEventListener('click',()=>apply(button.dataset.lang)));
+  selector.addEventListener('change',()=>apply(selector.value));
   apply('en'); // Never persist a choice: refreshed and reopened pages start in English.
 })();
