@@ -93,3 +93,20 @@
 .pricing .price-card ul{font-size:15px}
 .pricing .section-head>p{font-size:17px}
 @media(max-width:600px){.home-enquiry-inner{width:min(var(--max),calc(100% - 32px))}}
+
+/* FINAL REVIEW: universal privacy links and selected-work status indicators */
+a[href$="privacy.html"]{color:var(--gold2);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
+a[href$="privacy.html"]:hover,a[href$="privacy.html"]:focus-visible{color:#fff0b7}
+.pricing .maintenance-badge{font-family:'Oswald','Arial Narrow',sans-serif;font-size:clamp(16px,1.55vw,20px);font-weight:700;letter-spacing:.35px;line-height:1.5;text-transform:uppercase}
+.pricing .maintenance-badge .free-highlight{font-size:1.55em;font-weight:700;line-height:1;color:#7affb1;text-shadow:0 0 15px rgba(87,228,154,.3)}
+.portfolio-card .portfolio-live{color:#68e7a1;font-weight:800}
+.portfolio-card .portfolio-offline{color:#a8abb5;font-weight:800}
+.offline-dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:#8b909c;vertical-align:middle;margin-right:5px;box-shadow:0 0 0 3px rgba(139,144,156,.13)}
+.portfolio-card h4{font-size:15px;letter-spacing:0;margin:18px 0 10px}
+.portfolio-card h4 small{font-size:12px;font-weight:500;color:var(--muted)}
+.portfolio-features{padding-left:20px;margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.7}
+.portfolio-features li{margin:4px 0}
+.portfolio-tech{font-size:13px;color:var(--muted);margin:4px 0 16px}
+.portfolio-card .monitor-screenshot{height:auto;min-height:240px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.monitor-screenshot img{display:block;width:100%;height:auto;max-height:430px;object-fit:contain}
+@media(max-width:700px){.pricing .maintenance-badge{font-size:17px}}
