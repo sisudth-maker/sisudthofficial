@@ -117,3 +117,11 @@ a[href$="privacy.html"]:hover,a[href$="privacy.html"]:focus-visible{color:#fff0b
 .monitor-screenshot-heading span{color:var(--gold2);font-size:10px}
 .monitor-screenshot img{width:100%;height:auto;object-fit:contain}
 @media(max-width:500px){.monitor-screenshot-heading{flex-direction:column;align-items:flex-start;gap:3px}}
+
+/* Language selection: English is the default on every page load. */
+.site-header .language-switcher{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;margin:0 18px 0 0;font-size:12px;color:var(--muted)}
+.language-switcher button{appearance:none;border:0;background:transparent;color:var(--muted);font:600 12px 'DM Sans',sans-serif;padding:7px 3px;cursor:pointer;border-radius:4px;white-space:nowrap}
+.language-switcher button.active,.language-switcher button[aria-pressed="true"]{color:var(--gold2)}
+.language-switcher button:hover,.language-switcher button:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:1050px){.site-header .language-switcher{order:3;width:100%;margin:0 auto 8px;padding:0 12px}}
+@media(max-width:520px){.language-switcher button{font-size:11px}.site-header .language-switcher{gap:3px}}
