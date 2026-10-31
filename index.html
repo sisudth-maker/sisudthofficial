@@ -54,21 +54,6 @@
   </div>
 </section>
 
-<!-- HOME / FEATURED PROJECTS -->
-<section class="section home-featured" aria-labelledby="home-projects-title">
-  <div class="container">
-    <p class="section-kicker">FEATURED PROJECTS</p>
-    <h2 id="home-projects-title">A look at what we build.</h2>
-    <p class="muted home-section-lead">Selected examples of live client work, software prototypes and interface design.</p>
-    <div class="home-card-grid">
-      <article class="home-info-card"><span class="home-project-status">LIVE WEBSITE</span><h3>D&amp;B Poutine</h3><p>A restaurant website with menu information, customer contact options and online ordering links.</p><a href="https://dbpoutine.com/" target="_blank" rel="noopener noreferrer">Visit live website ↗</a></article>
-      <article class="home-info-card"><span class="home-project-status">PRIVATE SOFTWARE · IN DEVELOPMENT</span><h3>SDTH Market Monitor</h3><p>Python market-monitoring software covering gold, cryptocurrency and foreign exchange. Algorithmic trading features remain in development.</p><a href="about.html#portfolio">View project details ↗</a></article>
-      <article class="home-info-card"><span class="home-project-status">DESIGN CONCEPT</span><h3>Smart Thermostat</h3><p>A mobile interface concept for multi-room temperature controls, heating modes and scheduling.</p><a href="about.html#portfolio">View design concept ↗</a></article>
-    </div>
-    <div class="home-section-action"><a class="btn btn-outline" href="about.html#portfolio">Explore the full portfolio ↗</a></div>
-  </div>
-</section>
-
 <!-- HOME / REASONS TO WORK WITH US -->
 <section class="section home-reasons" aria-labelledby="home-reasons-title">
   <div class="container">
@@ -105,6 +90,49 @@
     <h2 id="home-cta-title">Have a project in mind?</h2>
     <p>Whether you need a professional website, custom software or help streamlining your workflows, tell us what you have in mind.</p>
     <div class="hero-actions"><a class="btn btn-gold" href="contact.html">Discuss your project ↗</a><a class="btn btn-outline" href="services.html">Explore our services ↗</a></div>
+  </div>
+</section>
+<!-- HOME / PROJECT ENQUIRY FORM -->
+<section class="section home-enquiry" aria-labelledby="home-enquiry-title">
+  <div class="container home-enquiry-inner">
+    <div class="home-enquiry-intro"><p class="section-kicker">GET IN TOUCH</p><h2 id="home-enquiry-title">Tell us about your project.</h2></div>
+    <form class="contact-form" id="project-form" action="https://formsubmit.co/ajax/sisudth@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Sisu DTH website enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot">
+            <div class="form-heading"><span>PROJECT BRIEF</span>
+                <p>A few details to get started.</p>
+            </div>
+            <label for="name">Your name</label><input id="name" name="name" required placeholder="Name">
+            <label for="email">Email address</label><input id="email" name="email" type="email" required placeholder="you@gmail.com">
+            <label for="service">What do you need?</label>
+            <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Website development</option>
+                <option>E-commerce website</option>
+                <option>Custom software</option>
+                <option>System integration / automation</option>
+                <option>SEO and performance</option>
+                <option>Maintenance and support</option>
+                <option>Not sure yet</option>
+            </select>
+            <label for="budget">Approximate budget</label>
+            <select id="budget" name="budget">
+                <option>Not decided</option>
+                <option>Under £500</option>
+                <option>£500–£1,000</option>
+                <option>£1,000–£3,000</option>
+                <option>£3,000–£10,000</option>
+                <option>£10,000+</option>
+            </select>
+            <label for="message">Tell us a little about your project</label>
+            <textarea id="message" name="message" rows="3" placeholder="Goals, features and preferred timeline..."></textarea>
+            <button class="btn btn-gold submit-btn" type="submit">Send project enquiry <span aria-hidden="true">↗</span></button>
+            <div class="form-status" id="form-status" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+            <p class="form-note">Your enquiry will be sent to Sisu DTH by our form delivery provider. Please do not include passwords or other sensitive information. For details about how enquiries are handled, see our <u><a href="privacy.html">privacy notice</a></u>.</p>
+            
+            </form>
   </div>
 </section>
 </main>
