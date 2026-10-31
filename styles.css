@@ -133,3 +133,16 @@ a[href$="privacy.html"]:hover,a[href$="privacy.html"]:focus-visible{color:#fff0b
 .language-switcher select option{background:#171a22;color:#fff}
 @media(max-width:1050px){.site-header .language-switcher{width:auto;order:initial;margin:0 12px 0 auto;padding:0}}
 @media(max-width:520px){.language-switcher select{min-width:105px;max-width:120px;padding:7px 4px;font-size:11px}}
+
+/* Mobile header: brand left, language selector next, hamburger always far right. */
+@media(max-width:1050px){
+  .site-header{display:flex;align-items:center;flex-wrap:nowrap}
+  .site-header .brand{order:1;flex:0 1 auto;min-width:0;margin-right:auto}
+  .site-header .language-switcher{order:2;flex:0 0 auto;width:auto;margin:0 12px 0 8px;padding:0}
+  .site-header .menu-toggle{order:3;flex:0 0 38px;margin:0 0 0 0;display:flex;align-items:center;justify-content:center;line-height:1;cursor:pointer}
+  .site-header #nav{order:4}
+}
+@media(max-width:520px){
+  .site-header .language-switcher{margin:0 10px 0 5px}
+  .site-header .menu-toggle{flex-basis:32px}
+}
