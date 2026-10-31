@@ -146,3 +146,20 @@ a[href$="privacy.html"]:hover,a[href$="privacy.html"]:focus-visible{color:#fff0b
   .site-header .language-switcher{margin:0 10px 0 5px}
   .site-header .menu-toggle{flex-basis:32px}
 }
+
+/* HEADER BREAKPOINT FIX: never show a hamburger alongside desktop links. */
+@media(min-width:681px){
+  .site-header .menu-toggle{display:none!important;visibility:hidden!important}
+  .site-header #nav{display:flex!important;position:static!important;flex-direction:row!important;align-items:center!important;flex:0 1 auto;min-width:0}
+  .site-header .language-switcher{order:2;flex:0 0 auto;width:auto;margin:0 16px 0 12px;padding:0}
+  .site-header .brand{order:1;flex:0 0 auto;margin-right:auto}
+  .site-header #nav{order:3}
+}
+@media(max-width:680px){
+  .site-header{display:flex;align-items:center;flex-wrap:nowrap}
+  .site-header .brand{order:1;flex:0 1 auto;min-width:0;margin-right:auto}
+  .site-header .language-switcher{order:2;flex:0 0 auto;width:auto;margin:0 10px 0 5px;padding:0}
+  .site-header .menu-toggle{display:flex!important;visibility:visible!important;order:3;flex:0 0 36px;align-items:center;justify-content:center}
+  .site-header #nav{order:4;display:none}
+  .site-header #nav.open{display:flex}
+}
