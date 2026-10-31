@@ -125,3 +125,11 @@ a[href$="privacy.html"]:hover,a[href$="privacy.html"]:focus-visible{color:#fff0b
 .language-switcher button:hover,.language-switcher button:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:1050px){.site-header .language-switcher{order:3;width:100%;margin:0 auto 8px;padding:0 12px}}
 @media(max-width:520px){.language-switcher button{font-size:11px}.site-header .language-switcher{gap:3px}}
+
+/* Compact dropdown language control; no visible "Language:" label */
+.site-header .language-switcher{width:auto;order:initial;flex:0 0 auto;margin:0 16px 0 0;padding:0}
+.language-switcher select{appearance:auto;-webkit-appearance:menulist;display:block;max-width:150px;min-width:118px;border:1px solid rgba(216,185,108,.5);border-radius:7px;padding:9px 7px;background:#171a22;color:#f7f5ee;font:600 12px 'DM Sans',sans-serif;cursor:pointer}
+.language-switcher select:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.language-switcher select option{background:#171a22;color:#fff}
+@media(max-width:1050px){.site-header .language-switcher{width:auto;order:initial;margin:0 12px 0 auto;padding:0}}
+@media(max-width:520px){.language-switcher select{min-width:105px;max-width:120px;padding:7px 4px;font-size:11px}}
